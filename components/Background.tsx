@@ -73,14 +73,14 @@ const Background = () => {
             default: "bounce",
           },
           random: false,
-          speed: 2,
+          speed: 1,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 30,
         },
         opacity: {
           value: 0.5,
