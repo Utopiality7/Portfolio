@@ -1,0 +1,32 @@
+import Image from "next/image";
+import Link from "next/link";
+
+interface Props {
+  image: string;
+  border?: boolean;
+}
+
+export default function BrandLogo({ image, border }: Props) {
+  return (
+    <div
+      className={`h-60 w-full flex items-center justify-center px-12 ${
+        border && "relative vCustomLine"
+      }`}
+    >
+      <Link
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block relative w-full h-12"
+      >
+        <Image
+          src={image}
+          alt="linkedin"
+          fill
+          style={{ objectFit: "cover" }}
+          className="opacity-50 transition-all duration-300 hover:opacity-100"
+        />
+      </Link>
+    </div>
+  );
+}
