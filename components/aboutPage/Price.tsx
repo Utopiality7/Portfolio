@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
 import MyIcon from "../MyIcon";
 
@@ -36,12 +37,12 @@ export default function Price({ Icon, packageName, price }: Props) {
       <span
         className={`w-full mb-2 flex justify-center items-center gap-4 text-gray-300 font-semibold uppercase cursor-pointer group`}
       >
-        <a
+        <Link
           href="/"
           className="group-hover:mx-2 group-hover:text-main-orange transition-all duration-300 tracking-wide text-[1.3rem]"
         >
           order now
-        </a>
+        </Link>
         <FaChevronRight className="text-2xl group-hover:text-main-orange transition-all duration-300" />
       </span>
     </div>
