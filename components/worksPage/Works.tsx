@@ -1,5 +1,6 @@
 import Title from "../Title";
 import Work from "./Work";
+import WorkLb from "./WorkLb";
 
 const menus = ["all", "video", "link", "image", "gallery", "content"];
 
@@ -17,11 +18,13 @@ export default function Works() {
         </li>
         <li className="py-10 px-12">
           <Work height="h-80" imageUrl="/images/b-3.jpg" margin />
-          <Work height="h-[28rem]" imageUrl="/images/b-1.jpg" margin />
+          <Work height="h-[34rem]" imageUrl="/images/b-1.jpg" margin />
           <Work height="h-80" imageUrl="/images/b-2.jpg" margin />
-          <Work height="h-[28rem]" imageUrl="/images/b-3.jpg" />
+          <Work height="h-72" imageUrl="/images/b-3.jpg" />
         </li>
       </ul>
+
+      <WorkLb />
     </div>
   );
 }
