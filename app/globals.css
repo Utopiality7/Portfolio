@@ -47,6 +47,11 @@ html {
   border-radius: 0.6rem;
 }
 
+*,
+*:hover {
+  scrollbar-color: auto;
+}
+
 .customLine::before {
   content: "";
   position: absolute;
