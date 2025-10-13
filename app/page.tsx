@@ -3,6 +3,8 @@ import Head from "next/head";
 import About from "../components/aboutPage/About";
 import Background from "../components/Background";
 import Blogs from "../components/blogsPage/Blogs";
+import Contact from "../components/contactPage/Contact";
+import LoaderPage from "../components/LoaderPage";
 import Menus from "../components/Menus";
 import ProfileCard from "../components/ProfileCard";
 import Resume from "../components/resumePage/Resume";
@@ -11,6 +13,8 @@ import Works from "../components/worksPage/Works";
 const Home: NextPage = () => {
   return (
     <main className="min-h-screen relative home flex justify-center items-center">
+      {/* <LoaderPage /> */}
+
       <Background />
       <section className="z-10 w-[126.8rem] h-[62.5rem] flex">
         <Menus />
@@ -20,7 +24,8 @@ const Home: NextPage = () => {
           {/* <About /> */}
           {/* <Resume /> */}
           {/* <Works /> */}
-          <Blogs />
+          {/* <Blogs /> */}
+          <Contact />
         </div>
       </section>
     </main>
