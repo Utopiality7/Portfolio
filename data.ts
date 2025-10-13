@@ -19,9 +19,9 @@ export const menus = [
 ];
 
 export const socialMedia = [
-  { id: 1, Icon: AiOutlineInstagram },
-  { id: 2, Icon: AiOutlineTwitter },
-  { id: 3, Icon: AiOutlineGithub },
-  { id: 4, Icon: AiFillLinkedin },
-  { id: 5, Icon: AiOutlineWhatsApp },
+  { id: 1, Icon: AiOutlineInstagram, label: "Instagram" },
+  { id: 2, Icon: AiOutlineTwitter, label: "Twitter" },
+  { id: 3, Icon: AiOutlineGithub, label: "Github" },
+  { id: 4, Icon: AiFillLinkedin, label: "Linkedin" },
+  { id: 5, Icon: AiOutlineWhatsApp, label: "WhatsApp" },
 ];
