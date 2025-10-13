@@ -16,7 +16,7 @@ export default function AboutMe() {
       <ul className="location grid grid-cols-2 mt-6 gap-y-2">
         <MyInfo field="age" value={String(new Date().getFullYear() - 1995)} />
         <MyInfo field="residence" value="Canada" />
-        <MyInfo field="freelance" value="Available" />
+        <MyInfo field="status" value="Available" />
         <MyInfo field="address" value="Toronto, Canada" />
       </ul>
     </div>
