@@ -4,6 +4,7 @@ import { useState } from "react";
 import Title from "../Title";
 import Work from "./Work";
 import WorkLb from "./WorkLb";
+import WorkSkeleton from "./WorkSkeleton";
 
 const menus = ["all", "video", "link", "image", "gallery", "content"];
 
@@ -16,54 +17,62 @@ export default function Works() {
 
       <ul className="grid grid-cols-2">
         <li className="relative vCustomLine py-10 px-12">
-          <Work
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-[28rem]"
             imageUrl="/images/b-1.jpg"
             margin
-          />
-          <Work
+          /> */}
+          <WorkSkeleton margin />
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-72"
             imageUrl="/images/b-2.jpg"
             margin
-          />
-          <Work
+          /> */}
+          <WorkSkeleton margin />
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-80"
             imageUrl="/images/b-3.jpg"
             margin
-          />
-          <Work
+          /> */}
+          <WorkSkeleton margin />
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-[28rem]"
             imageUrl="/images/b-1.jpg"
-          />
+          /> */}
+          <WorkSkeleton />
         </li>
         <li className="py-10 px-12">
-          <Work
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-80"
             imageUrl="/images/b-3.jpg"
             margin
-          />
-          <Work
+          /> */}
+          <WorkSkeleton margin />
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-[34rem]"
             imageUrl="/images/b-1.jpg"
             margin
-          />
-          <Work
+          /> */}
+          <WorkSkeleton margin />
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-80"
             imageUrl="/images/b-2.jpg"
             margin
-          />
-          <Work
+          /> */}
+          <WorkSkeleton margin />
+          {/* <Work
             setIsOpen={setIsOpen}
             height="h-72"
             imageUrl="/images/b-3.jpg"
-          />
+          /> */}
+          <WorkSkeleton />
         </li>
       </ul>
 
