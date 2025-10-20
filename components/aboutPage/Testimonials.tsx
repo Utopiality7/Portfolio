@@ -12,16 +12,16 @@ export default function Testimonials() {
     <div className="testimonials">
       <Swiper pagination={true} modules={[Pagination]}>
         <SwiperSlide>
-          {/* <Testimonial /> */}
-          <TestimonialSkeleton />
+          <Testimonial />
+          {/* <TestimonialSkeleton /> */}
         </SwiperSlide>
         <SwiperSlide>
-          {/* <Testimonial /> */}
-          <TestimonialSkeleton />
+          <Testimonial />
+          {/* <TestimonialSkeleton /> */}
         </SwiperSlide>
         <SwiperSlide>
-          {/* <Testimonial /> */}
-          <TestimonialSkeleton />
+          <Testimonial />
+          {/* <TestimonialSkeleton /> */}
         </SwiperSlide>
       </Swiper>
     </div>

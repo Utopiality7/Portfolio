@@ -1,17 +1,67 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import About from "../components/aboutPage/About";
-import Background from "../components/Background";
-import Blogs from "../components/blogsPage/Blogs";
-import Contact from "../components/contactPage/Contact";
-import LoaderPage from "../components/LoaderPage";
-import Menus from "../components/Menus";
-import ProfileCard from "../components/ProfileCard";
-import Resume from "../components/resumePage/Resume";
-import Works from "../components/worksPage/Works";
+import About from "@/components/aboutPage/About";
+import Background from "@/components/Background";
+import Blogs from "@/components/blogsPage/Blogs";
+import Contact from "@/components/contactPage/Contact";
+import LoaderPage from "@/components/LoaderPage";
+import Menus from "@/components/Menus";
+import ProfileCard from "@/components/ProfileCard";
+import Resume from "@/components/resumePage/Resume";
+import Works from "@/components/worksPage/Works";
 import "react-loading-skeleton/dist/skeleton.css";
+import { ProfileData } from "@/types";
 
-const Home: NextPage = () => {
+const getProfileData = async (): Promise<ProfileData> => {
+  const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_URL!, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_HYGRAPH_AUTH_TOKEN}`,
+    },
+    body: JSON.stringify({
+      query: `
+        query GetProfile {
+          profiles {
+            bio
+            cv
+            id
+            name
+            skills
+            socialMediaAcc {
+              icon
+              id
+              label
+              profileUrl
+            }
+            ownerInfo {
+              field
+              id
+              value
+            }
+            ownersPhoto {
+              url
+            }
+            bgImages {
+              url
+            }
+          }
+        }
+      `,
+    }),
+    next: { revalidate: 600 },
+  });
+
+  const { data } = await response.json();
+
+  return data?.profiles[0];
+};
+
+const Home: NextPage = async () => {
+  const profileData = await getProfileData();
+
+  console.log("--------------------", profileData);
+
   return (
     <main className="min-h-screen relative home flex justify-center items-center">
       {/* <LoaderPage /> */}
@@ -22,11 +72,11 @@ const Home: NextPage = () => {
         <ProfileCard />
 
         <div className="w-[70.5rem] h-full py-6 relative before:content-[''] before:absolute before:top-6 before:left-0 before:right-[0.7rem] before:h-6 before:bg-gray-900 before:z-30 after:content-[''] after:absolute after:bottom-6 after:left-0 after:right-[0.7rem] after:h-6 after:bg-gray-900 after:z-30">
-          {/* <About /> */}
+          <About />
           {/* <Resume /> */}
           {/* <Works /> */}
           {/* <Blogs /> */}
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </section>
     </main>
