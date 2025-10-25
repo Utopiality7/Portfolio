@@ -1,17 +1,37 @@
+"use client";
+
+import { useQuery } from "@apollo/client/react";
 import MyInfo from "../MyInfo";
+import profileOperations from "@/lib/graphql/profile";
+import AboutMeSkeleton from "./AboutMeSkeleton";
+import ReactMarkdown from "react-markdown";
+import "github-markdown-css";
+import remarkGfm from "remark-gfm";
+
+interface GetUserBio {
+  profiles: [{ bio: string }];
+}
 
 export default function AboutMe() {
+  const { loading, error, data } = useQuery<GetUserBio>(
+    profileOperations.Queries.getBio
+  );
+
+  if (error) {
+    console.log(error);
+    return <AboutMeSkeleton />;
+  }
+
+  if (loading || data === undefined) return <AboutMeSkeleton />;
+
   return (
     <div className="px-12 py-10">
-      <h3 className="leading-[1.8] text-2xl font-normal text-gray-400">
-        <p className="font-semibold text-[1.6rem]">
-          Hello there! I am Anh Thach.
-        </p>
-        Senior AI Full-Stack Developer & Mobile App developer from Toronto,
-        Canada for 8+ years of experience. I have rich experience in full-stack
-        development, also I am good at mobile development. I love to talk with
-        you about our unique.
-      </h3>
+      <article className="markdown-body bg-gray-900 text-gray-400 [&>h4]:m-0 [&>h4]:mb-2.5 [&>h4]:text-[1.6rem] [&>p]:text-2xl [&>p]:leading-[1.65] [&>blockquote]:bg-gray-800 [&>table>thead>tr]:bg-gray-800 [&>table>tbody>tr]:bg-gray-700">
+        <ReactMarkdown
+          children={data.profiles[0].bio}
+          remarkPlugins={[remarkGfm]}
+        />
+      </article>
 
       <ul className="location grid grid-cols-2 mt-6 gap-y-2">
         <MyInfo field="age" value={String(new Date().getFullYear() - 1995)} />
