@@ -5,7 +5,7 @@ interface Props {
   name: string;
   border?: boolean;
   desc: string;
-  Icon: IconType;
+  Icon: IconType | string;
 }
 
 export default function MyService({ name, Icon, border, desc }: Props) {

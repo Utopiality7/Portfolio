@@ -14,7 +14,6 @@ import {
   AiOutlineTwitter,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import { ServiceData } from "./types";
 
 export const menus = [
   { id: 1, label: "about", Icon: FaRegUser },
@@ -31,35 +30,4 @@ export const socialMedia = [
   { id: 3, Icon: AiOutlineGithub, label: "Github" },
   { id: 4, Icon: AiFillLinkedin, label: "Linkedin" },
   { id: 5, Icon: AiOutlineWhatsApp, label: "WhatsApp" },
-];
-
-export const services: ServiceData[] = [
-  {
-    id: 1,
-    title: "Front-end",
-    Icon: FaReact,
-    description:
-      "Modern and mobile-ready website that will help you reach all of your marketing.",
-  },
-  {
-    id: 2,
-    title: "Front-end",
-    Icon: FaReact,
-    description:
-      "Modern and mobile-ready website that will help you reach all of your marketing.",
-  },
-  {
-    id: 3,
-    title: "Front-end",
-    Icon: FaReact,
-    description:
-      "Modern and mobile-ready website that will help you reach all of your marketing.",
-  },
-  {
-    id: 4,
-    title: "Front-end",
-    Icon: FaReact,
-    description:
-      "Modern and mobile-ready website that will help you reach all of your marketing.",
-  },
 ];

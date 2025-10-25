@@ -9,8 +9,8 @@ export interface ProfileData {
 }
 
 export interface ServiceData {
-  id: number;
+  id: string;
   title: string;
-  Icon: IconType;
+  icon: IconType | string;
   description: string;
 }

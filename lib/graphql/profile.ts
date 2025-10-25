@@ -31,7 +31,8 @@ export default {
         services {
           id
           title
-          serviceDesc
+          icon
+          description
         }
       }
     `,
