@@ -27,18 +27,6 @@ const getProfileData = async (): Promise<ProfileData> => {
             cv
             id
             name
-            skills
-            socialMediaAcc {
-              icon
-              id
-              label
-              profileUrl
-            }
-            ownerInfo {
-              field
-              id
-              value
-            }
             ownersPhoto {
               url
             }
