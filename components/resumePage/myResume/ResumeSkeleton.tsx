@@ -1,4 +1,4 @@
-import SkeletonWrapper from "../SkeletonWrapper";
+import SkeletonWrapper from "../../SkeletonWrapper";
 import Skeleton from "react-loading-skeleton";
 
 export default function ResumeSkeleton({ border }: { border?: boolean }) {
@@ -14,7 +14,7 @@ export default function ResumeSkeleton({ border }: { border?: boolean }) {
         <Skeleton
           width={110}
           height={20}
-          style={{ "margin-bottom": ".8rem" } as React.CSSProperties}
+          style={{ marginBottom: ".8rem" } as React.CSSProperties}
         />
         <Skeleton width={120} height={12} />
         <Skeleton

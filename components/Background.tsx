@@ -73,14 +73,14 @@ const Background = () => {
             default: "bounce",
           },
           random: false,
-          speed: 1,
+          speed: 0.6,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 30,
+          value: 12,
         },
         opacity: {
           value: 0.5,
@@ -89,7 +89,7 @@ const Background = () => {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 1, max: 2 },
         },
       },
       detectRetina: true,

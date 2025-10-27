@@ -1,4 +1,4 @@
-import SkeletonWrapper from "../SkeletonWrapper";
+import SkeletonWrapper from "../../SkeletonWrapper";
 import Skeleton from "react-loading-skeleton";
 
 export default function DevelopmentSkeleton() {

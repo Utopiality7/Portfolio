@@ -14,6 +14,7 @@ import {
   AiOutlineTwitter,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
+import { TestimonialData } from "./types";
 
 export const menus = [
   { id: 1, label: "about", Icon: FaRegUser },
@@ -31,3 +32,12 @@ export const socialMedia = [
   { id: 4, Icon: AiFillLinkedin, label: "Linkedin" },
   { id: 5, Icon: AiOutlineWhatsApp, label: "WhatsApp" },
 ];
+
+export const quoteData: TestimonialData = {
+  id: "quote",
+  quote:
+    "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+  userName: "Martin Fowler",
+  userProfession: "Software Developer",
+  userImage: { url: "/images/martin.jpg" },
+};
