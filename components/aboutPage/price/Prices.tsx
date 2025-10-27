@@ -3,7 +3,7 @@
 import Price from "./Price";
 import { useQuery } from "@apollo/client/react";
 import profileOperations from "@/lib/graphql/profile";
-import { PriceData } from "../../types";
+import { PriceData } from "@/types";
 import { DiCodeigniter } from "react-icons/di";
 import { GiCondorEmblem } from "react-icons/gi";
 import PricesSkeleton from "./PricesSkeleton";

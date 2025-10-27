@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
-import MyIcon from "../MyIcon";
+import MyIcon from "../../MyIcon";
 import { PriceData } from "@/types";
 
 interface Props {

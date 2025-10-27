@@ -1,5 +1,5 @@
 import Skeleton from "react-loading-skeleton";
-import SkeletonWrapper from "../SkeletonWrapper";
+import SkeletonWrapper from "../../SkeletonWrapper";
 
 export default function ServiceSkeleton({ border }: { border?: boolean }) {
   return (

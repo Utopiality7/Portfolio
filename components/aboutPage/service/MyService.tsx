@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import MyIcon from "../MyIcon";
+import MyIcon from "../../MyIcon";
 
 interface Props {
   name: string;

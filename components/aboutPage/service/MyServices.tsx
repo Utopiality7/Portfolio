@@ -2,7 +2,7 @@
 
 import { useQuery } from "@apollo/client/react";
 import MyService from "./MyService";
-import { ServiceData } from "../../types";
+import { ServiceData } from "@/types";
 import profileOperations from "@/lib/graphql/profile";
 import ServicesSkeleton from "./ServicesSkeleton";
 

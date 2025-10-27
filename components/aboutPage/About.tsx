@@ -1,9 +1,9 @@
-import AboutMe from "./AboutMe";
-import BrandLogos from "./BrandLogos";
-import Facts from "./Facts";
-import MyServices from "./MyServices";
-import Prices from "./Prices";
-import Testimonials from "./Testimonials";
+import AboutMe from "./aboutMe/AboutMe";
+import BrandLogos from "./brandLogo/BrandLogos";
+import Facts from "./fact/Facts";
+import MyServices from "./service/MyServices";
+import Prices from "./price/Prices";
+import Testimonials from "./testimonial/Testimonials";
 import Title from "../Title";
 
 export default function About() {

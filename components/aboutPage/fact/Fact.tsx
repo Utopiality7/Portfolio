@@ -1,4 +1,4 @@
-import MyIcon from "../MyIcon";
+import MyIcon from "../../MyIcon";
 import { FactData } from "@/types";
 
 interface Props {

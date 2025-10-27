@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@apollo/client/react";
-import MyInfo from "../MyInfo";
+import MyInfo from "../../MyInfo";
 import profileOperations from "@/lib/graphql/profile";
 import AboutMeSkeleton from "./AboutMeSkeleton";
 import ReactMarkdown from "react-markdown";

@@ -1,5 +1,5 @@
 import Skeleton from "react-loading-skeleton";
-import SkeletonWrapper from "../SkeletonWrapper";
+import SkeletonWrapper from "../../SkeletonWrapper";
 
 interface Props {
   border?: boolean;

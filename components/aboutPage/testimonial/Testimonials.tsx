@@ -1,14 +1,14 @@
 "use client";
 
-import Testimonial from "../Testimonial";
+import Testimonial from "../../Testimonial";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import TestimonialSkeleton from "../TestimonialSkeleton";
+import TestimonialSkeleton from "../../TestimonialSkeleton";
 import profileOperations from "@/lib/graphql/profile";
 import { useQuery } from "@apollo/client/react";
-import { TestimonialData } from "../../types";
+import { TestimonialData } from "@/types";
 
 interface TestimonialQuery {
   testimonials: TestimonialData[];
