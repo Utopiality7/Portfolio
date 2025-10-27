@@ -1,22 +1,23 @@
+import { ClientData } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-  image: string;
+  client: ClientData;
   border?: boolean;
 }
 
-export default function BrandLogo({ image, border }: Props) {
+export default function BrandLogo({ client, border }: Props) {
   return (
     <div className={`py-16 px-12 ${border && "relative vCustomLine"}`}>
       <Link
-        href="/"
+        href={client.linkLocation}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block relative w-full h-12"
       >
         <Image
-          src={image}
+          src={client.imgLocation.url}
           alt="linkedin"
           fill
           style={{ objectFit: "cover" }}

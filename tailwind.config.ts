@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  important: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,10 +16,24 @@ const config: Config = {
       },
       transitionProperty: {
         width: "width",
-      }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "#9ca3af",
+            "h1, h2, h3, h4, h5, h6": {
+              margin: 0,
+              color: "inherit",
+            },
+            strong: {
+              color: "inherit",
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
 };
 
 export default config;

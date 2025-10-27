@@ -36,5 +36,58 @@ export default {
         }
       }
     `,
+
+    getPrices: gql`
+      query GetPrices {
+        prices {
+          id
+          packageName
+          packagePrice
+          priceType
+          freelanceUrl
+          packageServices {
+            id
+            isIncluded
+            packageService
+          }
+        }
+      }
+    `,
+
+    getTestimonials: gql`
+      query GetTestimonials {
+        testimonials {
+          id
+          userName
+          userProfession
+          quote
+          userImage {
+            url
+          }
+        }
+      }
+    `,
+
+    getClients: gql`
+      query GetClients {
+        clients {
+          id
+          linkLocation
+          imgLocation {
+            url
+          }
+        }
+      }
+    `,
+
+    getFacts: gql`
+      query getFacts {
+        facts {
+          id
+          icon
+          description
+        }
+      }
+    `,
   },
 };

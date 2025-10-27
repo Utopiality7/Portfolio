@@ -6,23 +6,37 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import TestimonialSkeleton from "../TestimonialSkeleton";
+import profileOperations from "@/lib/graphql/profile";
+import { useQuery } from "@apollo/client/react";
+import { TestimonialData } from "../../types";
+
+interface TestimonialQuery {
+  testimonials: TestimonialData[];
+}
 
 export default function Testimonials() {
+  const { data, loading, error } = useQuery<TestimonialQuery>(
+    profileOperations.Queries.getTestimonials
+  );
+
+  if (error) return <TestimonialSkeleton />;
+
+  if (loading || data === undefined) return <TestimonialSkeleton />;
+
   return (
     <div className="testimonials">
       <Swiper pagination={true} modules={[Pagination]}>
-        <SwiperSlide>
+        {data.testimonials.map((t) => (
+          <SwiperSlide key={t.id}>
+            <Testimonial testimonial={t} />
+          </SwiperSlide>
+        ))}
+        {/* <SwiperSlide>
           <Testimonial />
-          {/* <TestimonialSkeleton /> */}
         </SwiperSlide>
         <SwiperSlide>
           <Testimonial />
-          {/* <TestimonialSkeleton /> */}
-        </SwiperSlide>
-        <SwiperSlide>
-          <Testimonial />
-          {/* <TestimonialSkeleton /> */}
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );
