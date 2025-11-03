@@ -23,7 +23,7 @@ export default function BrandLogos() {
   return (
     <ul className="logos grid grid-cols-4">
       {data.clients.map((c: ClientData, idx) => (
-        <li>
+        <li key={c.id}>
           <BrandLogo client={c} border={idx !== data.clients.length - 1} />
         </li>
       ))}
