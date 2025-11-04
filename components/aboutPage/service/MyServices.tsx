@@ -23,37 +23,16 @@ export default function MyServices() {
   if (loading || data === undefined) return <ServicesSkeleton />;
 
   return (
-    <ul className="services grid grid-cols-2">
-      <li className="relative vCustomLine">
-        {data.services
-          .slice(0, Math.round(data.services.length / 2))
-          .map((s: ServiceData, idx) => (
-            <MyService
-              key={s.id}
-              name={s.title}
-              desc={s.description}
-              Icon={s.icon}
-              border={idx !== Math.round(data.services.length / 2) - 1}
-            />
-          ))}
-      </li>
-
-      <li>
-        {data.services
-          .slice(Math.round(data.services.length / 2))
-          .map((s: ServiceData, idx) => (
-            <MyService
-              key={s.id}
-              name={s.title}
-              desc={s.description}
-              Icon={s.icon}
-              border={
-                Math.round(data.services.length / 2) + idx !==
-                data.services.length - 1
-              }
-            />
-          ))}
-      </li>
+    <ul className="services grid grid-cols-2 relative vCustomLine before:left-1/2 before:-translate-x-1/2">
+      {data.services.map((s: ServiceData, idx) => (
+        <MyService
+          key={s.id}
+          name={s.title}
+          desc={s.description}
+          Icon={s.icon}
+          border={idx < data.services.length - 2}
+        />
+      ))}
     </ul>
   );
 }

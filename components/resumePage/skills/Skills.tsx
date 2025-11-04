@@ -24,22 +24,22 @@ export default function Skills() {
   return (
     <>
       <ul className="grid grid-cols-2">
-        <li className="relative vCustomLine py-6 px-12">
+        <li className="py-6 px-12">
           <IconTitle title="coding" Icon={FaReact} />
           <Coding coding={data?.skills[0]?.coding} />
         </li>
-        <li className="py-6 px-12">
+        <li className="py-6 px-12 relative vCustomLine before:left-0">
           <IconTitle title="knowledge" Icon={FaReact} />
           <Knowledge knowledge={data?.skills[0]?.knowledge} />
         </li>
       </ul>
 
       <ul className="grid grid-cols-2">
-        <li className="relative vCustomLine py-6 px-12">
+        <li className="py-6 px-12">
           <IconTitle title="AI & Cloud" Icon={FaReact} />
           <Development development={data?.skills[0]?.development} />
         </li>
-        <li className="py-6 px-12">
+        <li className="py-6 px-12 relative vCustomLine before:left-0">
           <IconTitle title="languages" Icon={FaReact} />
           <Languages languages={data?.skills[0]?.languages} />
         </li>

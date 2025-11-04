@@ -6,6 +6,7 @@ import {
 } from "@apollo/client";
 import { SetContextLink } from "@apollo/client/link/context";
 import { makeVar } from "@apollo/client";
+import { relayStylePagination } from "@apollo/client/utilities";
 
 const httpLink = new HttpLink({
   uri: process.env.NEXT_PUBLIC_HYGRAPH_URL,
@@ -24,7 +25,15 @@ const authLink = new SetContextLink((prevContext) => {
 
 const client = new ApolloClient({
   link: ApolloLink.from([authLink, httpLink]),
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      Query: {
+        fields: {
+          worksConnection: relayStylePagination(),
+        },
+      },
+    },
+  }),
 });
 
 export const currentWorkTab = makeVar("All");

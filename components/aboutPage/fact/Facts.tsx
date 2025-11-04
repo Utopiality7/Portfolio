@@ -22,9 +22,11 @@ export default function Facts() {
   return (
     <ul className="logos grid grid-cols-4 mb-12">
       {data.facts.map((fact: FactData, idx) => (
-        <li key={fact.id}>
-          <Fact fact={fact} border={idx !== data.facts.length - 1} />
-        </li>
+        <Fact
+          key={fact.id}
+          fact={fact}
+          border={idx !== data.facts.length - 1}
+        />
       ))}
     </ul>
   );

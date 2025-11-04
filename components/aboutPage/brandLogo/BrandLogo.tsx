@@ -9,7 +9,11 @@ interface Props {
 
 export default function BrandLogo({ client, border }: Props) {
   return (
-    <div className={`py-16 px-12 ${border && "relative vCustomLine"}`}>
+    <div
+      className={`py-16 px-12 ${
+        border && "relative vCustomLine before:right-0"
+      }`}
+    >
       <Link
         href={client.linkLocation}
         target="_blank"
