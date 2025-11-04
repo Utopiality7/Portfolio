@@ -7,7 +7,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
 import MyInfo from "../MyInfo";
 import { motion } from "framer-motion";
-import { SingleWorkData } from "../../types";
+import { SingleWorkData } from "@/types";
 import { useQuery } from "@apollo/client/react";
 import workOperations from "@/lib/graphql/work";
 import Loader from "../Loader";

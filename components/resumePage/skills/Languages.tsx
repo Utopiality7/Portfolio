@@ -1,4 +1,4 @@
-import { FieldValueData } from "../../../types";
+import { FieldValueData } from "@/types";
 import LanguageSkeleton from "./LanguageSkeleton";
 
 interface Props {
