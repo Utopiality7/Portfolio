@@ -9,13 +9,6 @@ import SkeletonWrapper from "../SkeletonWrapper";
 import { client } from "@/lib/apollo/apolloClient";
 import { BlogsQuery } from "@/types";
 
-interface fetchMoreArgs {
-  variables: {
-    skip: number;
-    first: number;
-  };
-}
-
 interface Props {
   currentPage: number;
   postsPerPage: number;

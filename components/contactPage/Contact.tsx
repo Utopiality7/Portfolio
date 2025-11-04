@@ -7,8 +7,8 @@ export default function Contact() {
   return (
     <div className="bg-gray-900 w-full max-h-full h-full overflow-y-scroll myScroll">
       <Title name="get in touch" />
-      {/* <Location /> */}
-      <LocationSkeleton />
+      <Location />
+      {/* <LocationSkeleton /> */}
 
       <Title name="contact form" />
       <ContactForm />

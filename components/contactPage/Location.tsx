@@ -14,7 +14,7 @@ export default function Location() {
       <ul className="location grid grid-cols-2 mt-10 gap-y-2">
         <MyInfo field="address" value="Toronto, Canada" />
         <MyInfo field="email" value="deepl.lead0907@gmail.com" />
-        <MyInfo field="phone" value="+1 763 447 9836" />
+        <MyInfo field="phone" value="+1 (412) 778-9988" />
         <MyInfo field="status" value="Available" />
       </ul>
     </div>

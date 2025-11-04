@@ -61,8 +61,8 @@ const Home: NextPage = async () => {
           {/* <About /> */}
           {/* <Resume /> */}
           {/* <Works /> */}
-          <Blogs />
-          {/* <Contact /> */}
+          {/* <Blogs /> */}
+          <Contact />
         </div>
       </section>
     </main>
