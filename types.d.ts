@@ -8,6 +8,11 @@ interface ProfileData {
   bgImages: { url: string }[];
 }
 
+interface partOfProfile {
+  name: string;
+  ownersPhoto: { url: string };
+}
+
 interface ServiceData {
   id: string;
   title: string;
@@ -115,4 +120,10 @@ interface BlogData {
 
 interface BlogsQuery {
   blogs: BlogData[];
+}
+
+interface MenuData {
+  id: number;
+  label: string;
+  Icon: IconType;
 }

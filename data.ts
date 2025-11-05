@@ -14,9 +14,9 @@ import {
   AiOutlineTwitter,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import { TestimonialData } from "./types";
+import { TestimonialData, MenuData } from "./types";
 
-export const menus = [
+export const menus: MenuData[] = [
   { id: 1, label: "about", Icon: FaRegUser },
   { id: 2, label: "resume", Icon: FaRegListAlt },
   { id: 3, label: "works", Icon: FaEye },

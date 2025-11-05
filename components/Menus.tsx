@@ -5,9 +5,12 @@ import MenuBtn from "./MenuBtn";
 import { BsCartFill } from "react-icons/bs";
 import { menus } from "../data";
 import SideMenuLb from "./SideMenuLb";
+import { useReactiveVar } from "@apollo/client/react";
+import { currentMenu } from "@/lib/apollo/apolloClient";
 
 export default function Menus() {
   const [sideMenu, setSideMenu] = useState<boolean>(false);
+  const menuId = useReactiveVar(currentMenu);
 
   return (
     <header className="w-[7.2rem] py-6 h-full mr-4 flex flex-col justify-between">
@@ -39,9 +42,10 @@ export default function Menus() {
         {menus.map((m, i) => (
           <MenuBtn
             key={m.id}
-            label={m.label}
-            Icon={m.Icon}
+            menu={m}
             noBorder={i + 1 === menus.length}
+            active={menuId}
+            reactiveVar={currentMenu}
           />
         ))}
       </div>

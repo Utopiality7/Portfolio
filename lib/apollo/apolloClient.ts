@@ -53,5 +53,6 @@ export const client = new ApolloClient({
 });
 
 export const currentWorkTab = makeVar("All");
+export const currentMenu = makeVar(1);
 
 export default client;
