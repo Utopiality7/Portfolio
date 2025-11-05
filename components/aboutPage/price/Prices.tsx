@@ -22,8 +22,8 @@ export default function Prices() {
   if (loading || data === undefined) return <PricesSkeleton />;
 
   return (
-    <ul className="prices grid grid-cols-2">
-      <li className="relative vCustomLine before:right-0">
+    <ul className="prices grid sm:grid-cols-2 grid-cols-1">
+      <li className="relative vCustomLine sm:before:block before:hidden before:right-0">
         <Price Icon={DiCodeigniter} price={data.prices[0]} />
       </li>
       <li>

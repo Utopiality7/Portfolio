@@ -3,14 +3,17 @@ import { FactData } from "@/types";
 
 interface Props {
   fact: FactData;
-  border?: boolean;
+  border: boolean;
+  pos: number;
 }
 
-export default function Fact({ fact, border }: Props) {
+export default function Fact({ fact, border, pos }: Props) {
   return (
     <li
-      className={`w-full h-fit flex flex-col items-center py-10 px-12 ${
-        border && "relative vCustomLine before:right-0"
+      className={`w-full h-fit flex flex-col items-center py-10 px-12 relative vCustomLine before:right-0 ${
+        border
+          ? `${pos === 1 ? "before:hidden sm:before:block" : "before:block"}`
+          : "before:hidden"
       }`}
     >
       <MyIcon Icon={fact.icon} />

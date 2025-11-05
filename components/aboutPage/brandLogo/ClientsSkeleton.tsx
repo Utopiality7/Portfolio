@@ -3,19 +3,12 @@ import ClientSkeleton from "./ClientSkeleton";
 export default function ClientsSkeleton() {
   return (
     <div>
-      <ul className="logos grid grid-cols-4">
-        <li>
-          <ClientSkeleton border />
-        </li>
-        <li>
-          <ClientSkeleton border />
-        </li>
-        <li>
-          <ClientSkeleton border />
-        </li>
-        <li>
-          <ClientSkeleton />
-        </li>
+      <ul className="logos grid sm:grid-cols-4 grid-cols-2">
+        {new Array(4).fill(0).map((_, idx) => (
+          <li key={idx}>
+            <ClientSkeleton border={idx !== 3} pos={idx} />
+          </li>
+        ))}
       </ul>
     </div>
   );

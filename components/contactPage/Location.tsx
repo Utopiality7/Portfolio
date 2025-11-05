@@ -11,7 +11,7 @@ export default function Location() {
         referrerPolicy="no-referrer-when-downgrade"
         className="w-full h-96"
       />
-      <ul className="location grid grid-cols-2 mt-10 gap-y-2">
+      <ul className="location grid grid-cols-1 sm:grid-cols-2 mt-10 gap-y-2">
         <MyInfo field="address" value="Toronto, Canada" />
         <MyInfo field="email" value="deepl.lead0907@gmail.com" />
         <MyInfo field="phone" value="+1 (412) 778-9988" />

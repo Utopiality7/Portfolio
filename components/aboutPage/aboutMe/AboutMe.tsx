@@ -32,7 +32,7 @@ export default function AboutMe() {
         />
       </article>
 
-      <ul className="location grid grid-cols-2 mt-6 gap-y-2">
+      <ul className="location grid grid-cols-1 sm:grid-cols-2 mt-6 gap-y-2">
         <MyInfo field="age" value={String(new Date().getFullYear() - 1995)} />
         <MyInfo field="residence" value="Canada" />
         <MyInfo field="status" value="Available" />

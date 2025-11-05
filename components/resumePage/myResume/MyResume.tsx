@@ -35,7 +35,7 @@ export default function MyResume() {
   }, [data]);
 
   return (
-    <ul className="grid grid-cols-2">
+    <ul className="grid sm:grid-cols-2 grid-cols-1">
       <li className="py-8 px-12">
         <IconTitle title="experience" Icon={FaNetworkWired} />
 
@@ -62,7 +62,7 @@ export default function MyResume() {
           })}
       </li>
 
-      <li className="py-6 px-12 relative vCustomLine before:left-0">
+      <li className="py-8 px-12 relative vCustomLine sm:before:block before:hidden before:left-0">
         <IconTitle title="education" Icon={FaGraduationCap} />
 
         {filteredData === undefined ? (

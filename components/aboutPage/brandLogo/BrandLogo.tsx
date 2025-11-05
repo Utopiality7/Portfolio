@@ -4,14 +4,17 @@ import Link from "next/link";
 
 interface Props {
   client: ClientData;
-  border?: boolean;
+  border: boolean;
+  pos: number;
 }
 
-export default function BrandLogo({ client, border }: Props) {
+export default function BrandLogo({ client, border, pos }: Props) {
   return (
     <div
-      className={`py-16 px-12 ${
-        border && "relative vCustomLine before:right-0"
+      className={`py-16 px-12 relative vCustomLine before:right-0 ${
+        border
+          ? `${pos === 1 ? "before:hidden sm:before:block" : "before:block"}`
+          : "before:hidden"
       }`}
     >
       <Link
@@ -24,7 +27,7 @@ export default function BrandLogo({ client, border }: Props) {
           src={client.imgLocation.url}
           alt="linkedin"
           fill
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "contain" }}
           className="opacity-50 transition-all duration-300 hover:opacity-100"
         />
       </Link>

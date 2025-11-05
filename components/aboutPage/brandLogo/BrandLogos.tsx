@@ -21,10 +21,14 @@ export default function BrandLogos() {
   if (loading || data === undefined) return <ClientsSkeleton />;
 
   return (
-    <ul className="logos grid grid-cols-4">
+    <ul className="logos grid sm:grid-cols-4 grid-cols-2">
       {data.clients.map((c: ClientData, idx) => (
         <li key={c.id}>
-          <BrandLogo client={c} border={idx !== data.clients.length - 1} />
+          <BrandLogo
+            client={c}
+            border={idx !== data.clients.length - 1}
+            pos={idx}
+          />
         </li>
       ))}
     </ul>

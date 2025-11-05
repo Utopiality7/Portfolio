@@ -79,7 +79,7 @@ const Background = () => {
           density: {
             enable: true,
           },
-          value: 18,
+          value: 24,
         },
         opacity: {
           value: 0.5,

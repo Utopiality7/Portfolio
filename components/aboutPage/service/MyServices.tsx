@@ -23,7 +23,7 @@ export default function MyServices() {
   if (loading || data === undefined) return <ServicesSkeleton />;
 
   return (
-    <ul className="services grid grid-cols-2 relative vCustomLine before:left-1/2 before:-translate-x-1/2">
+    <ul className="services grid grid-cols-1 sm:grid-cols-2 relative vCustomLine before:left-1/2 before:hidden sm:before:block before:-translate-x-1/2">
       {data.services.map((s: ServiceData, idx) => (
         <MyService
           key={s.id}
@@ -31,6 +31,7 @@ export default function MyServices() {
           desc={s.description}
           Icon={s.icon}
           border={idx < data.services.length - 2}
+          last={idx === data.services.length - 1}
         />
       ))}
     </ul>

@@ -20,12 +20,13 @@ export default function Facts() {
   if (loading || data === undefined) return <FactsSkeleton />;
 
   return (
-    <ul className="logos grid grid-cols-4 mb-12">
+    <ul className="logos grid sm:grid-cols-4 grid-cols-2 mb-12">
       {data.facts.map((fact: FactData, idx) => (
         <Fact
           key={fact.id}
           fact={fact}
           border={idx !== data.facts.length - 1}
+          pos={idx}
         />
       ))}
     </ul>
