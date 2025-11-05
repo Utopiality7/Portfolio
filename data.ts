@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import {
   FaRegUser,
   FaRegListAlt,
@@ -16,13 +17,49 @@ import {
 } from "react-icons/ai";
 import { TestimonialData, MenuData } from "./types";
 
+const About = dynamic(() => import("@/components/aboutPage/About"));
+const Resume = dynamic(() => import("@/components/resumePage/Resume"));
+const Works = dynamic(() => import("@/components/worksPage/Works"));
+const Blogs = dynamic(() => import("@/components/blogsPage/Blogs"));
+const Contact = dynamic(() => import("@/components/contactPage/Contact"));
+
 export const menus: MenuData[] = [
-  { id: 1, label: "about", Icon: FaRegUser },
-  { id: 2, label: "resume", Icon: FaRegListAlt },
-  { id: 3, label: "works", Icon: FaEye },
-  { id: 4, label: "blog", Icon: FaRegNewspaper },
-  { id: 5, label: "contact", Icon: FiSend },
-  { id: 6, label: "products", Icon: MdComputer },
+  {
+    id: 1,
+    label: "about",
+    Icon: FaRegUser,
+    Component: About,
+  },
+  {
+    id: 2,
+    label: "resume",
+    Icon: FaRegListAlt,
+    Component: Resume,
+  },
+  {
+    id: 3,
+    label: "works",
+    Icon: FaEye,
+    Component: Works,
+  },
+  {
+    id: 4,
+    label: "blog",
+    Icon: FaRegNewspaper,
+    Component: Blogs,
+  },
+  {
+    id: 5,
+    label: "contact",
+    Icon: FiSend,
+    Component: Contact,
+  },
+  {
+    id: 6,
+    label: "products",
+    Icon: MdComputer,
+    Component: Resume,
+  },
 ];
 
 export const socialMedia = [

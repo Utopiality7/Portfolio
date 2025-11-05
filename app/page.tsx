@@ -1,16 +1,7 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import About from "@/components/aboutPage/About";
-import Background from "@/components/Background";
-import Blogs from "@/components/blogsPage/Blogs";
-import Contact from "@/components/contactPage/Contact";
-import LoaderPage from "@/components/LoaderPage";
-import Menus from "@/components/Menus";
-import ProfileCard from "@/components/ProfileCard";
-import Resume from "@/components/resumePage/Resume";
-import Works from "@/components/worksPage/Works";
 import "react-loading-skeleton/dist/skeleton.css";
 import { ProfileData } from "@/types";
+import HomePage from "./components/HomePage";
 
 const getProfileData = async (): Promise<ProfileData> => {
   const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_URL!, {
@@ -48,25 +39,7 @@ const getProfileData = async (): Promise<ProfileData> => {
 const Home: NextPage = async () => {
   const profileData = await getProfileData();
 
-  return (
-    <main className="min-h-screen relative home flex justify-center items-center">
-      {/* <LoaderPage /> */}
-
-      <Background />
-      <section className="z-10 w-[126.8rem] h-[62.5rem] flex">
-        <Menus />
-        <ProfileCard profileData={profileData} />
-
-        <div className="w-[70.5rem] h-full py-6 relative before:content-[''] before:absolute before:top-6 before:left-0 before:right-[0.7rem] before:h-6 before:bg-gray-900 before:z-30 after:content-[''] after:absolute after:bottom-6 after:left-0 after:right-[0.7rem] after:h-6 after:bg-gray-900 after:z-30">
-          <About />
-          {/* <Resume />
-          <Works />
-          <Blogs />
-          <Contact /> */}
-        </div>
-      </section>
-    </main>
-  );
+  return <HomePage profileData={profileData} />;
 };
 
 export default Home;

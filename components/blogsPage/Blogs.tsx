@@ -43,7 +43,7 @@ export default function Blogs() {
   }, [blogsData]);
 
   return (
-    <div className="bg-gray-900 w-full max-h-full h-full overflow-y-scroll myScroll">
+    <>
       <Title name="blogs" />
 
       <ul className="grid grid-cols-2 relative vCustomLine before:left-1/2 before:-translate-x-1/2">
@@ -65,6 +65,6 @@ export default function Blogs() {
           onLoadMore={fetchMore}
         />
       </div>
-    </div>
+    </>
   );
 }
