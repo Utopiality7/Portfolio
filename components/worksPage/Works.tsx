@@ -1,10 +1,9 @@
 "use client";
 
 import { useQuery, useReactiveVar } from "@apollo/client/react";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Title from "../Title";
 import Work from "./Work";
-import WorkLb from "./WorkLb";
 import workOperations from "@/lib/graphql/work";
 import { WorksConnectionData } from "@/types";
 import WorksSkeleton from "./WorksSkeleton";
@@ -24,7 +23,6 @@ interface WorksVariables {
 
 export default function Works() {
   const currentTab = useReactiveVar(currentWorkTab);
-  const [isOpen, setIsOpen] = useState<string | null>(null);
   const {
     data: worksData,
     error: worksError,
@@ -48,10 +46,7 @@ export default function Works() {
   if (worksData === undefined) return <WorksSkeleton />;
 
   return (
-    <div
-      id="scrollableDiv"
-      className="bg-gray-900 w-full max-h-full h-full overflow-y-scroll myScroll"
-    >
+    <>
       <Title name="works" currentMenu={currentTab} />
 
       <InfiniteScroll
@@ -70,7 +65,6 @@ export default function Works() {
         scrollableTarget="scrollableDiv"
       >
         <motion.ul
-          layout="position"
           className="grid grid-cols-2 relative vCustomLine before:left-1/2 before:-translate-x-1/2 pt-12"
         >
           <AnimatePresence>
@@ -78,7 +72,6 @@ export default function Works() {
               filteredWorks.map((w) => (
                 <Work
                   key={w.node.id}
-                  setIsOpen={setIsOpen}
                   title={w.node.title}
                   imageUrl={w.node.images[0].url}
                   projectId={w.node.id}
@@ -87,10 +80,6 @@ export default function Works() {
           </AnimatePresence>
         </motion.ul>
       </InfiniteScroll>
-
-      <AnimatePresence>
-        {isOpen && <WorkLb isOpen={isOpen} setIsOpen={setIsOpen} />}
-      </AnimatePresence>
-    </div>
+    </>
   );
 }

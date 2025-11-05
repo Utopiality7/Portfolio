@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client/react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AiOutlineSwapRight } from "react-icons/ai";
 import contactOperations from "@/lib/graphql/contact";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 interface Inputs {
   fullName: string;
@@ -93,7 +93,6 @@ export default function ContactForm() {
           }`}
         />
       </div>
-      <Toaster />
     </form>
   );
 }

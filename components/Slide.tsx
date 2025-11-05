@@ -34,39 +34,6 @@ export default function Slide({ images }: Props) {
             </div>
           </SwiperSlide>
         ))}
-        {/* <SwiperSlide>
-          <div className="w-full h-full relative">
-            <Image
-              src="/images/b-1.jpg"
-              alt="tour"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative w-full h-full">
-            <Image
-              src="/images/b-2.jpg"
-              alt="tour"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-            2
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative w-full h-full">
-            <Image
-              src="/images/b-3.jpg"
-              alt="tour"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
-        </SwiperSlide> */}
       </Swiper>
     </div>
   );
