@@ -10,12 +10,12 @@ export default function FactSkeleton({ border }: Props) {
     <SkeletonWrapper>
       <div
         className={`w-full h-fit flex flex-col items-center py-10 px-12 ${
-          border && "relative vCustomLine"
+          border && "relative vCustomLine before:right-0"
         }`}
       >
         <Skeleton circle={true} width={65} height={65} />
         <Skeleton
-          className="text-2xl leading-relaxed tracking-wide text-center"
+          className="text-2xl text-gray-300 leading-relaxed tracking-wide text-center mt-4"
           width={100}
           style={{ marginTop: "1rem" } as React.CSSProperties}
         />

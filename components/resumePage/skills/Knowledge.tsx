@@ -17,14 +17,9 @@ export default function Knowledge({ knowledge }: Props) {
         ))
       ) : (
         <>
-          <KnowledgeSkeleton />
-          <KnowledgeSkeleton />
-          <KnowledgeSkeleton />
-          <KnowledgeSkeleton />
-          <KnowledgeSkeleton />
-          <KnowledgeSkeleton />
-          <KnowledgeSkeleton />
-          <KnowledgeSkeleton />
+          {new Array(8).fill(0).map((_, idx) => (
+            <KnowledgeSkeleton key={idx} />
+          ))}
         </>
       )}
     </div>

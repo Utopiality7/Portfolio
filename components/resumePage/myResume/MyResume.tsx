@@ -19,7 +19,7 @@ export default function MyResume() {
 
   return (
     <ul className="grid grid-cols-2">
-      <li className="py-6 px-12">
+      <li className="py-8 px-12">
         <IconTitle title="experience" Icon={FaNetworkWired} />
 
         {(error || loading || !data || !data.resumes.length) && (

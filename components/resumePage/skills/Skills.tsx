@@ -35,11 +35,11 @@ export default function Skills() {
       </ul>
 
       <ul className="grid grid-cols-2">
-        <li className="py-6 px-12">
+        <li className="pt-6 px-12">
           <IconTitle title="AI & Cloud" Icon={FaReact} />
           <Development development={data?.skills[0]?.development} />
         </li>
-        <li className="py-6 px-12 relative vCustomLine before:left-0">
+        <li className="pt-6 px-12 relative vCustomLine before:left-0">
           <IconTitle title="languages" Icon={FaReact} />
           <Languages languages={data?.skills[0]?.languages} />
         </li>
