@@ -42,6 +42,7 @@ export default function Price({ Icon, price }: Props) {
       >
         <Link
           href={price.freelanceUrl}
+          rel="noreferrer"
           target="_blank"
           className="group-hover:mx-2 group-hover:text-main-orange transition-all duration-300 tracking-wide text-[1.3rem]"
         >

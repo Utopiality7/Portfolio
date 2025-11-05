@@ -71,6 +71,7 @@ export default function WorkLb({ workId, reactiveVar }: Props) {
                 {workData.work.title}
                 <Link
                   href={workData.work.workUrl}
+                  rel="noreferrer"
                   target="_blank"
                   className="text-[1.4rem] flex items-center gap-2 rounded-full py-1.5 px-6 tracking-wide font-semibold capitalize hover:bg-sky-600 transition-all duration-300 text-white bg-sky-500"
                 >

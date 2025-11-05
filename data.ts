@@ -1,20 +1,14 @@
 import dynamic from "next/dynamic";
-import {
-  FaRegUser,
-  FaRegListAlt,
-  FaEye,
-  FaRegNewspaper,
-  FaReact,
-} from "react-icons/fa";
+import { FaRegUser, FaRegListAlt, FaEye, FaRegNewspaper } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { MdComputer } from "react-icons/md";
 import {
   AiFillLinkedin,
+  AiOutlineDiscord,
   AiOutlineGithub,
-  AiOutlineInstagram,
-  AiOutlineTwitter,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
+import { BiLogoTelegram } from "react-icons/bi";
 import { TestimonialData, MenuData } from "./types";
 
 const About = dynamic(() => import("@/components/aboutPage/About"));
@@ -63,11 +57,36 @@ export const menus: MenuData[] = [
 ];
 
 export const socialMedia = [
-  { id: 1, Icon: AiOutlineInstagram, label: "Instagram" },
-  { id: 2, Icon: AiOutlineTwitter, label: "Twitter" },
-  { id: 3, Icon: AiOutlineGithub, label: "Github" },
-  { id: 4, Icon: AiFillLinkedin, label: "Linkedin" },
-  { id: 5, Icon: AiOutlineWhatsApp, label: "WhatsApp" },
+  {
+    id: 1,
+    Icon: AiFillLinkedin,
+    label: "Linkedin",
+    mediaUrl: "https://www.linkedin.com/",
+  },
+  {
+    id: 2,
+    Icon: AiOutlineDiscord,
+    label: "Discord",
+    mediaUrl: "https://www.discord.com/",
+  },
+  {
+    id: 3,
+    Icon: AiOutlineGithub,
+    label: "Github",
+    mediaUrl: "https://www.github.com/",
+  },
+  {
+    id: 4,
+    Icon: BiLogoTelegram,
+    label: "Telegram",
+    mediaUrl: "https://www.telegram.com/",
+  },
+  {
+    id: 5,
+    Icon: AiOutlineWhatsApp,
+    label: "WhatsApp",
+    mediaUrl: "https://www.whatsapp.com",
+  },
 ];
 
 export const quoteData: TestimonialData = {
