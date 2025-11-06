@@ -135,7 +135,7 @@ interface guestBooksConnection {
       id: string;
       name: string;
       comment: string;
-      createdAt: string;
+      createdAt: Date;
     };
   }[];
   pageInfo: PageInfoData;
