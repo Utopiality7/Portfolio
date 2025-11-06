@@ -36,7 +36,7 @@ export default function Works() {
     return worksData.worksConnection.edges.filter((w) =>
       w.node.workTabs.some((t) => t.tab === currentTab)
     );
-  }, [worksData?.worksConnection.edges, currentTab]);
+  }, [worksData, currentTab]);
 
   if (worksError) {
     console.log(worksError.toString());
@@ -67,9 +67,7 @@ export default function Works() {
         }
         scrollableTarget="scrollableDiv"
       >
-        <motion.ul
-          className="grid grid-cols-1 sm:grid-cols-2 relative vCustomLine before:hidden sm:before:block before:left-1/2 before:-translate-x-1/2 pt-12"
-        >
+        <motion.ul className="grid grid-cols-1 sm:grid-cols-2 relative vCustomLine before:hidden sm:before:block before:left-1/2 before:-translate-x-1/2 pt-12">
           <AnimatePresence>
             {filteredWorks &&
               filteredWorks.map((w) => (
