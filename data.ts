@@ -16,6 +16,7 @@ const Resume = dynamic(() => import("@/components/resumePage/Resume"));
 const Works = dynamic(() => import("@/components/worksPage/Works"));
 const Blogs = dynamic(() => import("@/components/blogsPage/Blogs"));
 const Contact = dynamic(() => import("@/components/contactPage/Contact"));
+const GuestBook = dynamic(() => import("@/components/guestbookPage/GuestBook"));
 
 export const menus: MenuData[] = [
   {
@@ -53,6 +54,12 @@ export const menus: MenuData[] = [
     label: "products",
     Icon: MdComputer,
     Component: Resume,
+  },
+  {
+    id: 7,
+    label: "guest book",
+    Icon: MdComputer,
+    Component: GuestBook,
   },
 ];
 

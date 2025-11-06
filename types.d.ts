@@ -128,3 +128,15 @@ interface MenuData {
   Icon: IconType;
   Component: React.ComponentType;
 }
+
+interface guestBooksConnection {
+  edges: {
+    node: {
+      id: string;
+      name: string;
+      comment: string;
+      createdAt: string;
+    };
+  }[];
+  pageInfo: PageInfoData;
+}

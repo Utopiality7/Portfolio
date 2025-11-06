@@ -38,7 +38,7 @@ export default function HomePage({ profileData }: HomePageProps) {
   }, [setLoaderPage]);
 
   return (
-    <main className="min-h-screen relative home flex justify-center items-center">
+    <main className="relative flex items-center justify-center min-h-screen home">
       {loaderPage && <LoaderPage />}
 
       <Background />
@@ -54,7 +54,7 @@ export default function HomePage({ profileData }: HomePageProps) {
 
       <button
         onClick={() => showMenu(true)}
-        className="fixed top-6 right-6 w-14 h-14 rounded-full bg-main-orange text-white flex lg:hidden z-40 items-center justify-center"
+        className="fixed z-40 flex items-center justify-center text-white rounded-full top-6 right-6 w-14 h-14 bg-main-orange lg:hidden"
       >
         <BiMenu className="w-10 h-10" />
       </button>
@@ -71,7 +71,7 @@ export default function HomePage({ profileData }: HomePageProps) {
                   menuId === m.id && (
                     <motion.div
                       key={m.id}
-                      className="bg-gray-900 w-full max-h-full h-full overflow-y-scroll myScroll"
+                      className="w-full h-full max-h-full bg-gray-900"
                       initial="initialState"
                       animate="animateState"
                       exit="exitState"
