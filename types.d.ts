@@ -140,3 +140,8 @@ interface guestBooksConnection {
   }[];
   pageInfo: PageInfoData;
 }
+
+interface StatisticsData {
+  title: string;
+  info: string;
+}

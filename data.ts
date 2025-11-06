@@ -9,7 +9,7 @@ import {
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { BiLogoTelegram } from "react-icons/bi";
-import { TestimonialData, MenuData } from "./types";
+import { TestimonialData, MenuData, StatisticsData } from "./types";
 
 const About = dynamic(() => import("@/components/aboutPage/About"));
 const Resume = dynamic(() => import("@/components/resumePage/Resume"));
@@ -17,6 +17,7 @@ const Works = dynamic(() => import("@/components/worksPage/Works"));
 const Blogs = dynamic(() => import("@/components/blogsPage/Blogs"));
 const Contact = dynamic(() => import("@/components/contactPage/Contact"));
 const GuestBook = dynamic(() => import("@/components/guestbookPage/GuestBook"));
+const Stats = dynamic(() => import("@/components/statisticsPage/Stats"));
 
 export const menus: MenuData[] = [
   {
@@ -53,7 +54,7 @@ export const menus: MenuData[] = [
     id: 6,
     label: "products",
     Icon: MdComputer,
-    Component: Resume,
+    Component: Stats,
   },
   {
     id: 7,
@@ -104,3 +105,10 @@ export const quoteData: TestimonialData = {
   userProfession: "Software Developer",
   userImage: { url: "/images/martin.jpg" },
 };
+
+export const statisticsData: StatisticsData[] = [
+  {
+    title: "articles",
+    info: "10",
+  },
+];
