@@ -6,10 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { MouseEvent } from "react";
 import { IoMdClose } from "react-icons/io";
-import { menus, socialMedia } from "@/data";
+import { menus } from "@/data";
 import SideMenuBtn from "./SideMenuBtn";
 import { ProfileData } from "@/types";
 import { currentMenu } from "@/lib/apollo/apolloClient";
+import MyIcon from "./MyIcon";
 
 interface Props {
   sideMenu: boolean;
@@ -57,7 +58,7 @@ export default function SideMenuLb({ sideMenu, showMenu, profile }: Props) {
           </div>
 
           <div className="flex gap-x-5 items-center justify-center">
-            {socialMedia.map(({ id, Icon, label, mediaUrl }) => (
+            {profile.socialMedia.map(({ id, icon, label, mediaUrl }) => (
               <Link
                 rel="noreferrer"
                 href={mediaUrl}
@@ -65,7 +66,11 @@ export default function SideMenuLb({ sideMenu, showMenu, profile }: Props) {
                 data-tip={label}
                 key={id}
               >
-                <Icon className="text-gray-400 text-2xl transition-all duration-300 hover:text-main-orange" />
+                <MyIcon
+                  Icon={icon}
+                  wrapperClassName=""
+                  iconClassName="text-gray-400 text-2xl transition-all duration-300 hover:text-main-orange"
+                />
               </Link>
             ))}
           </div>

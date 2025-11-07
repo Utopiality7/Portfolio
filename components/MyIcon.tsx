@@ -20,6 +20,9 @@ import * as TiIcons from "react-icons/ti";
 interface Props {
   Icon: IconType | string;
   size?: string;
+  iconClassName?: string;
+  style?: React.CSSProperties;
+  wrapperClassName?: string;
 }
 
 const iconLibraries: { [key: string]: any } = {
@@ -51,9 +54,26 @@ const getIconComponent = (iconName: string): IconType => {
   return FaIcons.FaQuestionCircle;
 };
 
-export default function MyIcon({ Icon, size }: Props) {
+export default function MyIcon({
+  Icon,
+  size,
+  iconClassName,
+  style,
+  wrapperClassName,
+}: Props) {
   const IconComponent =
     typeof Icon === "string" ? getIconComponent(Icon) : Icon;
+
+  if (wrapperClassName !== "undefined") {
+    return (
+      <div className={wrapperClassName}>
+        <IconComponent
+          className={iconClassName || "text-5xl text-main-orange"}
+          style={style}
+        />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -61,7 +81,10 @@ export default function MyIcon({ Icon, size }: Props) {
         size ? size : "w-24 h-24"
       } rounded-full border-2 border-main-orange border-solid flex items-center justify-center`}
     >
-      <IconComponent className="text-5xl text-main-orange" />
+      <IconComponent
+        className={iconClassName || "text-5xl text-main-orange"}
+        style={style}
+      />
     </div>
   );
 }

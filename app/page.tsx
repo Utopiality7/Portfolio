@@ -24,6 +24,16 @@ const getProfileData = async (): Promise<ProfileData> => {
             bgImages {
               url
             }
+            socialMedia {
+              id
+              icon
+              label
+              mediaUrl
+              logoColor {
+                hex
+              }
+              info
+            }
           }
         }
       `,
@@ -33,7 +43,7 @@ const getProfileData = async (): Promise<ProfileData> => {
 
   const { data } = await response.json();
 
-  return data?.profiles[0];
+  return data.profiles[0];
 };
 
 const Home: NextPage = async () => {

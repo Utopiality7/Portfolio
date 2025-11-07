@@ -32,7 +32,7 @@ export default function ProfileCard({ profileData }: Props) {
         </h1>
 
         <Typing />
-        <MediaIcons />
+        <MediaIcons socialMedia={profileData.socialMedia} />
 
         <div className="flex absolute bottom-0 left-0 w-full h-28 borderLeft customLine">
           <MyLink

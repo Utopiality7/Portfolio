@@ -54,12 +54,6 @@ export default function MyResume() {
             />
           ))
         )}
-
-        {data &&
-          data.resumes.map((r: ExperienceData) => {
-            if (!r.isExperience) return null;
-            return <ResumeItem key={r.id} resume={r} border />;
-          })}
       </li>
 
       <li className="py-8 px-12 relative vCustomLine sm:before:block before:hidden before:left-0">

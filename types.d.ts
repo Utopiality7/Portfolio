@@ -6,6 +6,7 @@ interface ProfileData {
   name: string;
   ownersPhoto: { url: string };
   bgImages: { url: string }[];
+  socialMedia: SocialMediaData[];
 }
 
 interface partOfProfile {
@@ -101,6 +102,7 @@ interface SingleWorkData {
   description: string;
   title: string;
   workUrl: string;
+  githubUrl?: string;
   clientName: string;
   ownerName: string;
   techStack: string[];
@@ -142,6 +144,19 @@ interface guestBooksConnection {
 }
 
 interface StatisticsData {
+  id?: string;
   title: string;
+  info: string | number;
+  externalLink?: string;
+}
+
+interface SocialMediaData {
+  id: string;
+  label: string;
+  mediaUrl: string;
+  logoColor: {
+    hex: string;
+  };
   info: string;
+  icon: IconType | string;
 }

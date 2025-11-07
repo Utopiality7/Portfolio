@@ -14,6 +14,16 @@ export default {
           bgImages {
             url
           }
+          socialMedia {
+            id
+            icon
+            label
+            mediaUrl
+            logoColor {
+              hex
+            }
+            info
+          }
         }
       }
     `,
@@ -97,6 +107,23 @@ export default {
           id
           icon
           description
+        }
+      }
+    `,
+
+    getSocialMedias: gql`
+      query getSocialMedias {
+        profiles {
+          socialMedia {
+            id
+            icon
+            label
+            mediaUrl
+            logoColor {
+              hex
+            }
+            info
+          }
         }
       }
     `,

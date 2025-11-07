@@ -1,15 +1,8 @@
 import dynamic from "next/dynamic";
 import { FaRegUser, FaRegListAlt, FaEye, FaRegNewspaper } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
-import { MdComputer } from "react-icons/md";
-import {
-  AiFillLinkedin,
-  AiOutlineDiscord,
-  AiOutlineGithub,
-  AiOutlineWhatsApp,
-} from "react-icons/ai";
-import { BiLogoTelegram } from "react-icons/bi";
-import { TestimonialData, MenuData, StatisticsData } from "./types";
+import { MdComputer, MdDashboard } from "react-icons/md";
+import { TestimonialData, MenuData } from "./types";
 
 const About = dynamic(() => import("@/components/aboutPage/About"));
 const Resume = dynamic(() => import("@/components/resumePage/Resume"));
@@ -46,54 +39,21 @@ export const menus: MenuData[] = [
   },
   {
     id: 5,
-    label: "contact",
-    Icon: FiSend,
-    Component: Contact,
+    label: "stats",
+    Icon: MdDashboard,
+    Component: Stats,
   },
   {
     id: 6,
-    label: "products",
-    Icon: MdComputer,
-    Component: Stats,
+    label: "contact",
+    Icon: FiSend,
+    Component: Contact,
   },
   {
     id: 7,
     label: "guest book",
     Icon: MdComputer,
     Component: GuestBook,
-  },
-];
-
-export const socialMedia = [
-  {
-    id: 1,
-    Icon: AiFillLinkedin,
-    label: "Linkedin",
-    mediaUrl: "https://www.linkedin.com/",
-  },
-  {
-    id: 2,
-    Icon: AiOutlineDiscord,
-    label: "Discord",
-    mediaUrl: "https://www.discord.com/",
-  },
-  {
-    id: 3,
-    Icon: AiOutlineGithub,
-    label: "Github",
-    mediaUrl: "https://www.github.com/",
-  },
-  {
-    id: 4,
-    Icon: BiLogoTelegram,
-    label: "Telegram",
-    mediaUrl: "https://www.telegram.com/",
-  },
-  {
-    id: 5,
-    Icon: AiOutlineWhatsApp,
-    label: "WhatsApp",
-    mediaUrl: "https://www.whatsapp.com",
   },
 ];
 
@@ -105,10 +65,3 @@ export const quoteData: TestimonialData = {
   userProfession: "Software Developer",
   userImage: { url: "/images/martin.jpg" },
 };
-
-export const statisticsData: StatisticsData[] = [
-  {
-    title: "articles",
-    info: "10",
-  },
-];
