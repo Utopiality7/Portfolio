@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   try {
     const response = await fetch(
-      "https://dev.to/api/articles?username=utopiality"
+      "https://dev.to/api/articles?username=utopiality&per_page=9000000000000000000"
     );
 
     if (!response.ok) {
