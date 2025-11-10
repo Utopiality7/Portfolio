@@ -7,7 +7,7 @@ import { TestimonialData, MenuData } from "./types";
 const About = dynamic(() => import("@/components/aboutPage/About"));
 const Resume = dynamic(() => import("@/components/resumePage/Resume"));
 const Works = dynamic(() => import("@/components/worksPage/Works"));
-const Blogs = dynamic(() => import("@/components/blogsPage/Blogs"));
+const DevBlogs = dynamic(() => import("@/components/blogsPage/DevBlogs"));
 const Contact = dynamic(() => import("@/components/contactPage/Contact"));
 const GuestBook = dynamic(() => import("@/components/guestbookPage/GuestBook"));
 const Stats = dynamic(() => import("@/components/statisticsPage/Stats"));
@@ -35,7 +35,7 @@ export const menus: MenuData[] = [
     id: 4,
     label: "blog",
     Icon: FaRegNewspaper,
-    Component: Blogs,
+    Component: DevBlogs,
   },
   {
     id: 5,

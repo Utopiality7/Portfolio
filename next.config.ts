@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
         hostname: "*.graphassets.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "res.cloudinay.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "media2.dev.to",
+        pathname: "/**",
+      },
     ],
   },
 };

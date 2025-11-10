@@ -3,9 +3,9 @@ import {
   ApolloLink,
   InMemoryCache,
   HttpLink,
+  makeVar,
 } from "@apollo/client";
 import { SetContextLink } from "@apollo/client/link/context";
-import { makeVar } from "@apollo/client";
 import { relayStylePagination } from "@apollo/client/utilities";
 
 const httpLink = new HttpLink({
