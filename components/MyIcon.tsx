@@ -64,7 +64,7 @@ export default function MyIcon({
   const IconComponent =
     typeof Icon === "string" ? getIconComponent(Icon) : Icon;
 
-  if (wrapperClassName !== "undefined") {
+  if (wrapperClassName !== undefined) {
     return (
       <div className={wrapperClassName}>
         <IconComponent
